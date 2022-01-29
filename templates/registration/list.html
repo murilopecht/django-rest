@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table class="table bg-warning" style="border-radius: 12px; padding: 10px; border-collapse: separate;">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Usuário</th>
+            <th scope="col">E-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+                {%for user in allusers%}
+                <tr>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+      </table>        
+{% endblock %}
+
